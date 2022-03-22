@@ -18,7 +18,6 @@ public class GyroScript : MonoBehaviour
     {
         if (SystemInfo.supportsGyroscope)
             transform.rotation = GyroToUnity(Input.gyro.attitude);
-        Debug.Log("Gyro Data" + Input.gyro.attitude);
     }
     private Quaternion GyroToUnity (Quaternion q)
     {

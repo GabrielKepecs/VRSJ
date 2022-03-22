@@ -10,12 +10,16 @@ public class EventTrigger : MonoBehaviour
     public GameObject toEnable;
     public Rigidbody rdb;
     public bool autodestroy=false;
+    public bool EndGame = false;
 
     public Vector3 force;
 
     //quando o jogador entra no trigger
     private void OnTriggerEnter(Collider other)
     {
+
+        StartCoroutine(ExecuteAfterTime());
+        
         //toca o som
         if (sound)
         {
@@ -34,8 +38,21 @@ public class EventTrigger : MonoBehaviour
         //autodestruiçao do objeto
         if (autodestroy)
         {
-            Destroy(gameObject,5);
+            Destroy(gameObject, 5);
+        }
+        
+        IEnumerator ExecuteAfterTime()
+        {
+
+            yield return new WaitForSeconds(5);
+
+            if (EndGame)
+            {
+                Application.Quit();
+                Debug.Log("Acabou");
+            }
         }
     }
+
 
 }

@@ -46,8 +46,8 @@ public class Door : MonoBehaviour
         {
             StartCoroutine(Abre()); //incia a corotina de abrir 
 
-        }
-        else
+       }
+       else
         {
             StartCoroutine(Fecha()); // inverso
         }

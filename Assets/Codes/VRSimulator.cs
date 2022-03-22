@@ -16,7 +16,7 @@ public class VRSimulator : MonoBehaviour
     void Update()
     {
         //teste no editor este cara nao roda no celular
-#if (UNITY_EDITOR)
+//#if (UNITY_EDITOR)
         Cursor.lockState = CursorLockMode.Locked; //linha q trava o mousena tela
 
         //movimento de pescoço na camera
@@ -25,7 +25,7 @@ public class VRSimulator : MonoBehaviour
         //movimento de torçao no corpo
         Vector3 bodymov = new Vector3(0, Input.GetAxis("Mouse X"), 0);
         transform.parent.Rotate(bodymov);
-#endif
+//#endif
 
     }
 }

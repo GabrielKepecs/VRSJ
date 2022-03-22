@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/level1.unity
     guid: 6af96a57af6252c4aab06a6e37840fbf
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1133bf27b02d89b449f87d7f4476892c,
-      type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1d625e34f2e3b87418e365872dfd88e3,
-      type: 2}
-    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 0c9469dfc5a7837468564d70989ac7bf,
-      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1133bf27b02d89b449f87d7f4476892c, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1d625e34f2e3b87418e365872dfd88e3, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 0c9469dfc5a7837468564d70989ac7bf, type: 2}
