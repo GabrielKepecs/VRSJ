@@ -11,6 +11,13 @@ public class EventLook : MonoBehaviour
     public bool Inspectable;
     public Transform Inspecting;
     private bool BeingInspect = false;
+  
+    public GameObject objeto;
+
+    private void Start()
+    {
+        
+    }
 
     //funcao que é chamada depois de um tempo olhando
     public void ButtonAction()
@@ -28,7 +35,7 @@ public class EventLook : MonoBehaviour
         //adiciona uma força no objeto selecionado
         if (Inspectable)
         {
-
+            objeto.GetComponent<TextDyn>().Quantidade();
             Debug.Log("Analisado");
             transform.position = Inspecting.position;
             this.rdb.useGravity = false;
@@ -46,8 +53,10 @@ public class EventLook : MonoBehaviour
     }
     public void Largar()
     {
+        
         BeingInspect = false;
-        this.rdb.useGravity = true;
+        Destroy(gameObject);
+
     }
     //se acontece uma colisao toca o so
     private void OnCollisionEnter(Collision collision)
